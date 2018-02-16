@@ -5,8 +5,9 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BlankApp1.Views.Tab2ContentPage"
              Title="{Binding Title}">
-
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
-    </StackLayout>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Command="{Binding GoCommand}" TextColor="Black" BackgroundColor="Yellow" Text="Go"/>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

@@ -13,5 +13,10 @@ namespace BlankApp1.ViewModels
 		{
 			Title = "ContentPage";
 		}
+
+		public override void OnNavigatedTo(NavigationParameters parameters)
+		{
+			base.OnNavigatedTo(parameters);
+		}
 	}
 }

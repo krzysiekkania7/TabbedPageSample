@@ -12,11 +12,22 @@ namespace BlankApp1.ViewModels
         public Tab2ContentPageViewModel(INavigationService navigationService) : base(navigationService)
 		{
 			Title = "Tab2ContentPage";
+			GoCommand = new DelegateCommand(GoCommandExecute);
 		}
 
-		public override void OnNavigatedTo(NavigationParameters parameters)
+		public DelegateCommand GoCommand { get; }
+
+		private async void GoCommandExecute()
 		{
-			base.OnNavigatedTo(parameters);
+			try
+			{
+				await NavigationService.NavigateAsync("Content");
+			}
+			catch (Exception e)
+			{
+				throw e;
+			}
+
 		}
 	}
 }
